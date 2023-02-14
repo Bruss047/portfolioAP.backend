@@ -20,18 +20,15 @@ public class dtoProyecto {
     @NotBlank
     private String urlP;
 
-    @NotBlank
-    private String fecha;
-    
     public dtoProyecto() {
     }
 
-    public dtoProyecto(String nombre, String descripcion, String img, String urlP, String fecha) {
+    public dtoProyecto(String nombre, String descripcion, String img, String urlP) {
   
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.img = img;
         this.urlP = urlP;
-        this.fecha= fecha;
+
     } 
 }

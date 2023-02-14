@@ -36,21 +36,18 @@ public class Proyecto {
     @Column(name = "urlP", nullable = false, length = 160)
     private String urlP;
 
-    
-    @Column(name = "fechaProyecto", nullable = false, length = 80)
-    private String fecha;
-    
+ 
  
     
     public Proyecto() {
     }
 
-    public Proyecto(String nombre, String descripcion, String img, String urlP, String fecha) {
+    public Proyecto(String nombre, String descripcion, String img, String urlP) {
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.img = img;
         this.urlP = urlP;
-        this.fecha= fecha;
+       
     }
     
 }
