@@ -72,6 +72,7 @@ public class CProyecto {
         proyecto.setNombre(dtoproy.getNombre());
         proyecto.setDescripcion(dtoproy.getDescripcion());
         proyecto.setImg(dtoproy.getImg());
+        proyecto.setUrlP(dtoproy.getUrlP());
 
        
         
