@@ -75,7 +75,7 @@ public class CProyecto {
         proyecto.setUrlP(dtoproy.getUrlP());
       
         sproyecto.saveProyecto(proyecto);
-        return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto actualizado."), HttpStatus.OK);
              
     }
      
@@ -86,6 +86,6 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
         }
         sproyecto.delete(id);
-        return new ResponseEntity(new Mensaje("Proyecto eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto eliminado."), HttpStatus.OK);
     }
 }
