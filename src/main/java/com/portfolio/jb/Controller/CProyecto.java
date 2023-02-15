@@ -73,9 +73,7 @@ public class CProyecto {
         proyecto.setDescripcion(dtoproy.getDescripcion());
         proyecto.setImg(dtoproy.getImg());
         proyecto.setUrlP(dtoproy.getUrlP());
-
-       
-        
+      
         sproyecto.saveProyecto(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
              
