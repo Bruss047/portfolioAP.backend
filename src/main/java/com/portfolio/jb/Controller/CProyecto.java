@@ -37,7 +37,7 @@ public class CProyecto {
     @GetMapping("/get_detail/{id}")
     public ResponseEntity<Skills> getById(@PathVariable("id") int id) {
         if (!sproyecto.existsById(id)) {
-            return new ResponseEntity(new Mensaje("Skill no encontrado."), HttpStatus.NOT_FOUND);
+            return new ResponseEntity(new Mensaje("Proyecto no encontrado."), HttpStatus.NOT_FOUND);
         }
         Proyecto proy = sproyecto.getOne(id).get();
         return new ResponseEntity(proy, HttpStatus.OK);
@@ -63,7 +63,7 @@ public class CProyecto {
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
    
         if(sproyecto.existsByNombre(dtoproy.getNombre()) && sproyecto.getByNombre(dtoproy.getNombre()).get().getProyId() != id)
-            return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El proyecto ya existe"), HttpStatus.BAD_REQUEST);
   
         if(StringUtils.isBlank(dtoproy.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
@@ -77,7 +77,7 @@ public class CProyecto {
        
         
         sproyecto.saveProyecto(proyecto);
-        return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Proyecto actualizado"), HttpStatus.OK);
              
     }
      
